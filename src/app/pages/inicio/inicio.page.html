@@ -1,0 +1,22 @@
+<app-header
+  [title]="'Componentes'"
+  [backButton]="false"
+></app-header>
+
+<ion-content>
+
+  <!-- <ion-button routerLink="/alert">
+      Alert
+  </ion-button>
+  <ion-button routerLink="/action-sheet">
+      Action Sheet
+  </ion-button> -->
+
+  <ion-list>
+    <ion-item *ngFor="let c of componentes | async" [routerLink]="c.redirecTo" detail="true">
+      <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+      {{c.name}}
+    </ion-item>
+  </ion-list>
+
+</ion-content>

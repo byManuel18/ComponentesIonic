@@ -1,0 +1,40 @@
+<app-header title="Checks"></app-header>
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let item of data" (click)="onClick(item)">
+      <ion-checkbox labelPlacement="end" justify="start" [color]="item.name" [(ngModel)]="item.selected">{{item.name}}</ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item *ngFor="let item of data">
+      <ion-checkbox labelPlacement="end" justify="end" [color]="item.name" [(ngModel)]="item.selected">{{item.name}}</ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item *ngFor="let item of data">
+      <ion-checkbox justify="end" [color]="item.name" [(ngModel)]="item.selected">{{item.name}}</ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item *ngFor="let item of data">
+      <ion-checkbox labelPlacement="start" justify="start" [color]="item.name" [(ngModel)]="item.selected">{{item.name}}</ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item *ngFor="let item of data">
+      <ion-checkbox [color]="item.name" [(ngModel)]="item.selected">{{item.name}}</ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item *ngFor="let item of data">
+      <ion-checkbox labelPlacement="end" [color]="item.name" [(ngModel)]="item.selected">{{item.name}}</ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
